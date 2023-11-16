@@ -187,7 +187,8 @@
 }
 
 .login-form input[type="text"],
-.login-form input[type="password"] {
+.login-form input[type="password"],
+.login-form input[type="email"] {
     width: 100%;
     border: 1px #ccc solid;
     padding: 4px;
@@ -198,7 +199,8 @@
     border-radius: 4px;
 }
 
-.login-form input[type="submit"] {
+.login-form input[type="submit"],
+.login-form input[type="reset"] {
     border-radius: 5px;
     padding: 5px 10px;
     background-color: #fff;
@@ -219,6 +221,10 @@
 .login-form li a:hover {
     text-decoration: underline;
     color: #3880ec;
+}
+
+.thongbao {
+    color: rgb(48, 159, 122);
 }
 
 .top10 img{
@@ -341,3 +347,38 @@
     border: 1px #CCC solid;
 }
 
+/* --------------------------TIN TUC -------------------- */
+.box-new1{
+    margin-left: 200px;
+}
+.img-new img{
+    width: 480px;
+}
+.ic {
+    font-size: 15px;
+    font-weight: 700;
+}
+.doc h3{
+    font-size: 17px;
+}
+.doc p{
+    font-size: 14px;
+    line-height: 25px;
+}
+.box-new2 {
+    margin-left: 40px;
+}
+.title-new h1,i{
+    font-size: 23px;
+    border-bottom: 1px solid #666 ;
+}
+.content-chill h3{
+    font-size: 15px;
+}
+.content-chill i{
+    font-size: 12px;
+    
+}
+.content-chill{
+    line-height: 25px;
+}

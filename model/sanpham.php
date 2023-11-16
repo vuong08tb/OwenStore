@@ -28,8 +28,8 @@ function loadall_sanpham($kyw,$iddanhmuc){
 }
 function loadone_sanpham($id){
     $sql = "select * from sanpham where id =".$id;
-    $dm = pdo_query_one($sql);
-    return $dm;
+    $sp = pdo_query_one($sql);
+    return $sp;
 }
 function update_sanpham($id,$iddanhmuc,$tensp,$giasp,$mota,$hinh){
     if($hinh!="")

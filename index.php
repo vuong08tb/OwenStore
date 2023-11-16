@@ -2,6 +2,7 @@
     include "view/header.php";
     include "model/pdo.php";
     include "model/sanpham.php";
+    include "model/taikhoan.php";
     include "global.php";
     include "model/danhmuc.php";
     
@@ -25,11 +26,30 @@
                 include "view/home.php";
                 }
                 break;
+            case 'sanphamct';
+                if(isset($_GET['idsp'])&&($_GET['idsp']>0)) {
+                    $onesp = loadone_sanpham($_GET['idsp']);
+                    include "view/sanphamct.php";
+                } else {
+                    include "view/home.php";
+                }
+                
+                break;
+            case 'dangky';
+            if(isset($_POST['dangky'])&&($_POST['dangky'])) {
+                $email = $_POST['email'];
+                $user = $_POST['user'];
+                $pass = $_POST['pass'];
+                insert_taikhoan($email,$user,$pass);
+                $thongbao = "Đăng ký thành công. Vui lòng quay lại trang đăng nhập";
+            }
+                include "view/taikhoan/dangky.php";
+                break;
             case 'gioithieu';
-                include "view/gioithieu.php";
+                include "view/gioithieu.php";   
                 break;
             case 'lienhe';
-                include "view/lienhe.php";
+                include "view/tintuc.php";
                 break;
             default:
                 include "view/home.php";
